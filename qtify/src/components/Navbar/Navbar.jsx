@@ -4,20 +4,16 @@ import Search from '../Search/Search';
 import styles from './Navbar.module.css';
 import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
+import LogoImg from '../../assets/logo.png';
+
 function Navbar({ searchData }) {
   return (
     <nav className={styles.navbar}>
-      <Logo />
-      <Search />
-      <Button children="GIVE FEEDBACK" />
-      {/* <Logo /> */}
-      {/* <Link to="/">
-      </Link> */}
-      {/* <Search
-        placeholder="Search a song of your choice"
-        searchData={searchData}
-      /> */}
-      {/* <Button>Give Feedback</Button> */}
+      <div className={styles.logoDiv}>
+        <img src={LogoImg} alt="logo" width={67} />
+      </div>
+      <Search search={'Search a song of your choice'} />
+      <Button children="Give Feedback" />
     </nav>
   );
 }
